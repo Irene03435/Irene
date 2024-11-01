@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealEye SDK Integration</title>
+    
+    <script type="module">
+        import EmbeddedPageSdk from "https://app.realeye.io/sdk/js/testRunnerEmbeddableSdk-1.6.js";
+
+        window.addEventListener("DOMContentLoaded", () => {
+            const debugMode = false;
+            const stimulusId = null; // Or use a specific UUID
+            const forceRun = false;
+
+            const reSdk = new EmbeddedPageSdk(debugMode, stimulusId, forceRun);
+        });
+    </script>
+</head>
+<body>
+    <h1>Welcome to My Website</h1>
+    <p>This is a demo page for integrating RealEye SDK.</p>
+
+    <!-- Example area of interest -->
+    <div data-re-aoi-name="Example AOI" style="width: 200px; height: 200px; background-color: lightblue;">
+        This is an area of interest.
+    </div>
+</body>
+</html>
